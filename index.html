@@ -5,28 +5,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Curio Collections</title>
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <style>
     :root {
       --pokemon-red: #ed4245;
-      --pokemon-blue: #5865f2;
-      --pokemon-green: #57f287;
-      --pokemon-black: #2b2d31;
-      --pokemon-white: #ffffff;
+      --pokemon-black: #1a1a1a;
+      --pokemon-dark-gray: #2b2d31;
       --pokemon-light-gray: #f5f5f5;
-      --pokemon-gray: #e0e0e0;
+      --tcgplayer-blue: #0066cc;
+      --instagram-purple: #E1306C;
+      --tiktok-pink: #ff0050;
+      --youtube-red: #ff0000;
+      --linktree-green: #00a884;
     }
     body {
       margin: 0;
       font-family: 'Quicksand', sans-serif;
       background: var(--pokemon-black);
-      color: var(--pokemon-white);
+      color: var(--pokemon-light-gray);
       line-height: 1.6;
     }
     header {
       text-align: center;
       padding: 3rem 1rem;
-      background: #1e1f22;
-      color: var(--pokemon-white);
+      background: var(--pokemon-dark-gray);
+      color: var(--pokemon-light-gray);
       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
       position: relative;
     }
@@ -58,7 +61,7 @@
       margin: 0 auto;
     }
     .section h2 {
-      color: var(--pokemon-white);
+      color: var(--pokemon-light-gray);
       font-size: 2rem;
       margin-bottom: 1.5rem;
       text-align: center;
@@ -79,9 +82,9 @@
       border-radius: 3px;
     }
     .event-box {
-      background: var(--pokemon-white);
+      background: var(--pokemon-dark-gray);
       padding: 2rem;
-      border-left: 6px solid var(--pokemon-green);
+      border-left: 6px solid var(--pokemon-red);
       margin-bottom: 1.5rem;
       border-radius: 0 16px 16px 0;
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
@@ -90,24 +93,13 @@
     .event-box p {
       margin: 1rem 0;
       font-size: 1.2rem;
-      color: var(--pokemon-black);
+      color: var(--pokemon-light-gray);
     }
     .event-box strong {
-      color: var(--pokemon-blue);
+      color: var(--pokemon-red);
       font-size: 1.3rem;
       display: inline-block;
       margin-right: 0.5rem;
-    }
-    .event-box::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 40px;
-      height: 40px;
-      background: var(--pokemon-green);
-      border-radius: 0 16px 0 16px;
-      opacity: 0.2;
     }
     .socials {
       display: flex;
@@ -116,27 +108,66 @@
       gap: 1rem;
     }
     .socials a {
-      display: inline-block;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
       padding: 0.75rem 1.5rem;
-      background: var(--pokemon-white);
-      color: var(--pokemon-blue);
+      background: var(--pokemon-dark-gray);
+      color: var(--pokemon-light-gray);
       text-decoration: none;
       border-radius: 12px;
       transition: all 0.3s ease;
-      border: 2px solid var(--pokemon-blue);
+      border: 2px solid transparent;
       font-weight: 600;
     }
-    .socials a:hover {
-      background: var(--pokemon-blue);
-      color: var(--pokemon-white);
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(88, 101, 242, 0.3);
+    .socials a i {
+      font-size: 1.2rem;
+    }
+    .socials a.tcgplayer {
+      border-color: var(--tcgplayer-blue);
+      color: var(--tcgplayer-blue);
+    }
+    .socials a.tcgplayer:hover {
+      background: var(--tcgplayer-blue);
+      color: white;
+    }
+    .socials a.instagram {
+      border-color: var(--instagram-purple);
+      color: var(--instagram-purple);
+    }
+    .socials a.instagram:hover {
+      background: var(--instagram-purple);
+      color: white;
+    }
+    .socials a.tiktok {
+      border-color: var(--tiktok-pink);
+      color: var(--tiktok-pink);
+    }
+    .socials a.tiktok:hover {
+      background: var(--tiktok-pink);
+      color: white;
+    }
+    .socials a.youtube {
+      border-color: var(--youtube-red);
+      color: var(--youtube-red);
+    }
+    .socials a.youtube:hover {
+      background: var(--youtube-red);
+      color: white;
+    }
+    .socials a.linktree {
+      border-color: var(--linktree-green);
+      color: var(--linktree-green);
+    }
+    .socials a.linktree:hover {
+      background: var(--linktree-green);
+      color: white;
     }
     footer {
       text-align: center;
       padding: 2rem 1rem;
-      background: #1e1f22;
-      color: var(--pokemon-white);
+      background: var(--pokemon-dark-gray);
+      color: var(--pokemon-light-gray);
       margin-top: 2rem;
       position: relative;
     }
@@ -162,6 +193,7 @@
       }
       .socials a {
         text-align: center;
+        justify-content: center;
       }
     }
   </style>
@@ -175,7 +207,7 @@
   <section class="section">
     <h2>Next Vending Event</h2>
     <div class="event-box">
-      <p><strong>Date:</strong> May 24th, 2025</p>
+      <p><strong>Date:</strong> June 7th, 2025</p>
       <p><strong>Time:</strong> 10:00 AM - 4:00 PM</p>
       <p><strong>Event:</strong> Southern California Premier Card Show</p>
       <p><strong>Location:</strong> Boys & Girls Club of Westminster<br/>14400 Chestnut St, Westminster, CA 92683</p>
@@ -185,12 +217,21 @@
   <section class="section">
     <h2>Connect with Me</h2>
     <div class="socials">
-      <a href="https://www.tiktok.com/@curiocollections" target="_blank">TikTok</a>
-      <a href="https://www.youtube.com/@curiocollections" target="_blank">YouTube</a>
-      <a href="https://www.instagram.com/curiocollections.pkmn" target="_blank">Instagram</a>
-      <a href="https://linktr.ee/curiocollections" target="_blank">Linktree</a>
-      <a href="https://www.ebay.com/usr/curiocollections" target="_blank">eBay Store</a>
-      <a href="https://www.tcgplayer.com/search/product/all?seller=curiocollections" target="_blank">TCGPlayer Store</a>
+      <a href="https://www.tcgplayer.com/search/product/all?seller=curiocollections" target="_blank" class="tcgplayer">
+        <i class="fas fa-store"></i>TCGPlayer Store
+      </a>
+      <a href="https://www.instagram.com/curiocollections.pkmn" target="_blank" class="instagram">
+        <i class="fab fa-instagram"></i>Instagram
+      </a>
+      <a href="https://www.tiktok.com/@curiocollections" target="_blank" class="tiktok">
+        <i class="fab fa-tiktok"></i>TikTok
+      </a>
+      <a href="https://www.youtube.com/@curiocollections" target="_blank" class="youtube">
+        <i class="fab fa-youtube"></i>YouTube
+      </a>
+      <a href="https://linktr.ee/curiocollections" target="_blank" class="linktree">
+        <i class="fas fa-link"></i>Linktree
+      </a>
     </div>
   </section>
 
